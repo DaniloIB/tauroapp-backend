@@ -1,0 +1,35 @@
+# DELETE http://localhost:3000/productos/7
+
+# POST http://localhost:3000/productos/
+# Content-Type: application/json
+
+# {
+#     "stock": 10,
+#     "modeloId" : 7, 
+#     "talleId": 3
+# }
+
+# POST http://localhost:3000/productos/crear-modelo
+# Content-Type: application/json
+
+# {
+#     "nombre": "Marian 7/8",
+#     "subcategoriaId": 1,
+#     "proveedorId" : 1
+# }
+
+
+# POST http://localhost:3000/productos/crear-talle
+# Content-Type: application/json
+
+# {
+#     "valor": "ROJO"
+# }
+
+
+# GET http://localhost:3000/productos/modelo?nombre=CARTERA+HERMES
+
+# GET http://localhost:3000/productos/4
+
+GET http://localhost:3000/productos
+

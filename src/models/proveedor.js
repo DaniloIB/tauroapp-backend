@@ -12,6 +12,9 @@ export const Proveedor = sequelize.define('proveedores', {
         type: DataTypes.STRING,
         unique: true
     }
+}, 
+{
+    timestamps: false,
 }) 
 
 
@@ -23,5 +26,5 @@ Proveedor.hasMany(Modelo, {
 
 Modelo.belongsTo(Proveedor,{
     foreignKey: "proveedor_id",
-    targetId: 'id'
+    targetKey: 'id'
 })

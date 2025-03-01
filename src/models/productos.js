@@ -8,7 +8,8 @@ export const Producto = sequelize.define("productos", {
         autoIncrement: true
     },
     stock: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        defaultValue: 0
     }
 })
 

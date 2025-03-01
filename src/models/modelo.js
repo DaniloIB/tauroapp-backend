@@ -13,6 +13,9 @@ export const Modelo = sequelize.define("modelos",{
         type: DataTypes.STRING,
         unique: true
     }
+}, 
+{
+    timestamps: false,
 })
 
 
@@ -24,5 +27,5 @@ Modelo.hasMany(Producto, {
 
 Producto.belongsTo(Modelo,{
     foreignKey: "modelo_id",
-    targetId: 'id'
+    targetKey: 'id'
 })

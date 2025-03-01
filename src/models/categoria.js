@@ -10,8 +10,12 @@ export const Categoria = sequelize.define("categorias",{
     },
     nombre: {
         type: DataTypes.STRING,
-        unique: true
-    }
+        unique: true,        
+    },
+    
+}, 
+{
+    timestamps: false,
 })
 
 //Relacion con tabla Subcategoria
@@ -22,6 +26,6 @@ Categoria.hasMany(Subcategoria, {
 
 Subcategoria.belongsTo(Categoria,{
     foreignKey: "categoria_id",
-    targetId: 'id'
+    targetKey: 'id'
 })
 
